@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="Style1.css">
+    <style>
+        .footer{
+    padding: 20px;
+    text-align: center;
+    background: peru;}
+    </style>
+</head>
+
+<body>
+    <div class = "header">
+    <h1 id="your-id-name">Для входа авторизуйтесь</h1>
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Введите Логин">
+
+    <br><br>
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Введите Пароль">
+
+    <br><br>
+    <input type="button" value="Войти" onclick="login()">
+    <br><br>
+    <input type="button" value="Очистить" onclick="ochist()">
+</div>
+<div class="header">
+    
+</div>
+
+<div class="navbar">
+    <a href="ОзнакомлениеСПравилами.html" class="right">Ознакомление с правилами</a>
+    <a href="ПросмотрРабот.html">Просмотр работ</a>
+</div>
+<div class="navbar">
+    <a href="НачальнаяСтраница.html">Вернутьтся на главную</a>
+</div>
+<div class="header">
+    <h1></h1>
+</div>
+
+<div class="footer" >
+    <h2>Сайт создал Янко Стефан 23ИС1-2</h2>
+    <p>По вопросам обращайтесь slivnoy.kran@gmail.com</p>
+</div>
+</body>
+
+<script>
+    function login(){
+elem = document.getElementById('username');
+elem2 = document.getElementById('password');
+
+username = elem.value;
+password = elem2.value;
+if(username == "admin" & password == "12345"){
+        alert("Нажмите OK чтобы перейти на страницу админа");
+    window.open("СтраницаАдмина.html","_self");
+    } 
+    else{
+    if(username == "user" & password == "00000"){
+        
+            alert("Нажмите OK чтобы перейти на страницу пользователя");
+    window.open("СтраницаПользователя.html","_self");
+        
+    }
+    else{
+        if(username == "lobotomy" & password == "lobotomy"){
+        alert("просыпайся");
+        window.open("https://youtu.be/vI2eNeD-jWQ?si=4pv1tnnkE92M0Ha2","_self");
+    } else{alert("Неверный логин или пароль");}
+        
+    }
+}
+    }
+
+function ochist(){
+    username.value = "";
+    password.value = "";
+}
+var color = [, "#3C9EE7", "#E7993C"];
+ 
+        document.querySelector("div.footer").addEventListener(
+            "mouseover", function () {
+ 
+                document.querySelector("div.footer").style.background
+                    = color[(Math.floor(Math.random() * color.length))];
+            })
+
+</script>
+</html>
