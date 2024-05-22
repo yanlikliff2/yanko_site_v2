@@ -83,7 +83,7 @@ def promsrab():
     return render_template('ПросмотрРабот.html')
 
 @app.route('/backtolog')
-def promsrab():
+def backtolog():
     return render_template('index.html')
 
 if __name__ == '__main__':
