@@ -12,16 +12,16 @@
     <body>
         <div class="header">
             <lottie-player
-                src="{{ url_for('static', filename='401_anim.json') }}"
+                src="{{ url_for('static', filename='401_animated.json') }}"
                 background="transparent" speed="1"
                 style="width: 700px; height: 700px; margin: auto;"
                 loop autoplay>
             </lottie-player>
             <p>
-                Кажется здесь нет того что вы искали...
+                Кажется вы не зарегистрировались...
             </p>
-            <a href="/home">
-                Вернуться на главную
+            <a href="/backtolog">
+                Зарегистрироваться
             </a>
         </div>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
