@@ -5,18 +5,26 @@
         <meta charset="utf-8">
         <meta name = "viewport" content="width=device-width,initial-scale=1.0">
         <title>404 Page not Found</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style_to_button.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='Style1.css') }}">
         
     </head>
 
     <body>
         <div class="header">
-            <button class="glow-on-hover" type="button">Вернуться на главную</button>
+            <h1>
+                405
+            </h1>
+            <button class="glow-on-hover" type="button">Бесполезно но красиво</button>
             <p>
-                Кажется вы не зарегистрировались...
+                Метод не поддерживается
             </p>
-            <a href="/backtolog">
-                Зарегистрироваться
+            <a href="/home">
+                На главную
+            </a>
+        </div>
+        <div class="navbar">
+            <a href="/home">
+                На главную
             </a>
         </div>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
