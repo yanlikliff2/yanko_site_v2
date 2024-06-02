@@ -44,6 +44,7 @@ body{
 .row {
     display: flex;
 }
+
 .side{
     background-color: blanchedalmond;
     padding: 20px;

@@ -86,6 +86,10 @@ def promsrab():
 def backtolog():
     return render_template('index.html')
 
+@app.route('/a405')
+def a405():
+    return render_template('405.html')
+
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -98,6 +102,10 @@ def forbidden(e):
 @app.errorhandler(401)
 def unauthorized(e):
     return render_template('401.html'), 401
+
+@app.errorhandler(405)
+def method_not_allowed(e):
+    return render_template('405.html'), 405
 
 if __name__ == '__main__':
     with app.app_context():
