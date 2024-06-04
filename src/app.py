@@ -88,7 +88,7 @@ def backtolog():
 
 @app.route('/a405')
 def a405():
-    return render_template('405.html')
+    return render_template('400.html')
 
 
 @app.errorhandler(404)

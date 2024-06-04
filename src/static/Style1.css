@@ -10,6 +10,13 @@ body{
     background-color: blanchedalmond;
     color: black;
 }
+.header1{
+    padding: 80px;
+    height: 90%;
+    text-align: center;
+    background-color: blanchedalmond;
+    color: black;
+}
 .navbar{
     overflow: hidden;
     background-color: #BD3127;

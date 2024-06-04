@@ -1,0 +1,329 @@
+$color_pink: #ff3888
+$color_bgcblue: #e7f2ff
+$color_blue: #0393fd
+$color_lightblue: #00c0ff
+$color_reflective: #00e2ff
+$color_darkblue: #1e5acf
+$color_gray: #bbb4cc
+$color_black: #412c4c
+@mixin size($w,$h)
+  width: $w
+  height: $h
+@mixin paint_line
+  background-color: $color_black
+  border-radius: 20px
+*
+  // border: 1px solid black
+  box-sizing: border-box
+  position: relative
+html,body
+  background-color: $color_bgcblue
+  margin: 0px
+  padding: 0px
+  width: 100%
+  height: 100%
+.container
+  width: 100%
+  height: 100%
+  height: 550px
+  minx-height: 550px
+  max-height: 550px
+.main
+  position: absolute
+  left: 50%
+  top: 40%
+  transform: translate(-50%,-50%)
+  // top: 100px
+  animation: move 3s infinite
+  .circle
+    position: absolute
+    +size(40px,40px)
+    border: 8px solid $color_black
+    background-color: white
+    top: 28px
+    left: -15px
+    border-radius: 100%
+    overflow: hidden
+    &:before
+      content: ''
+      display: block
+      border-radius: 100%
+      position: absolute
+      +size(25px,25px)
+      left: 0px
+      top: 7px
+      background-color: $color_gray
+  .block
+    +size(200px,97px)
+    background-color: $color_black
+    border-radius: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 2
+    .inner_block
+      +size(90%,84%)
+      background-color: $color_pink
+      border-radius: 15px
+      overflow: hidden
+      .big_paint
+        animation: bigpaintmove 3s infinite
+        transform: rotate(-45deg)
+        +size(300%,600%)
+        background-color: transparent
+        border: 6px solid red
+        position: absolute
+        overflow: hidden
+        left: -110%
+        top: -100%
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        z-index: 2
+        .inner_line
+          +size(65px,7px)
+          +paint_line
+          margin-right: 20px
+          margin-top: 20px
+        .dot
+          +size(8px,8px)
+          border-radius: 100%
+          background-color: $color_black
+          margin-right: 20px
+          margin-top: 20px
+        .inner_line2
+          +size(50px,7px)
+          +paint_line
+          margin-right: 20px
+          margin-top: 24px
+        .inner_line3
+          +size(30px,7px)
+          +paint_line
+          margin-right: 20px
+          margin-top: 17px
+      .bgc
+        +size(100%,80%)
+        border-radius: 15px
+        background-color: rgba(#ff5693,0.8)
+        .inner
+          +size(80px,30px)
+          border-radius: 12px
+          background-color: rgba(#ff90ac,0.8)
+          position: absolute
+          top: 10px
+          left: 8px
+.line
+  .line1
+    +size(80px,85px)
+    position: absolute
+    top: -60px
+    right: -30px
+    background-color: transparent
+    border: 10px solid $color_black
+    border-radius: 0px 22px 50px 0px
+    &:before
+      content: ''
+      +size(20px,30px)
+      position: absolute
+      background-color: $color_bgcblue
+      bottom: 0px
+      left: -12px
+  .line2
+    +size(60px,40px)
+    position: absolute
+    top: 15px
+    right: 45px
+    background-color: transparent
+    border: 10px solid $color_black
+    border-radius: 25px 0px 0px 0px
+    &:before
+      content: ''
+      +size(54px,13px)
+      position: absolute
+      background-color: $color_bgcblue
+      bottom: -12px
+      left: 0px
+    &:after
+      content: ''
+      +size(20px,20px)
+      position: absolute
+      background-color: $color_bgcblue
+      bottom: 0px
+      right: -15px
+.handle
+  margin-top: 10px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  .handle_top 
+    +size(70px,120px)
+    background-color: $color_lightblue
+    border-radius: 20px 20px 0px 0px
+    // border-bottom: 6px solid $color_black
+    border-top: 20px solid $color_black
+    border-left: 11px solid $color_black
+    border-right: 11px solid $color_black
+    transform: perspective(5px) rotateX(1deg)
+    transform-origin: bottom
+    z-index: 2
+  .handle_bottom
+    +size(70px,72px)
+    border-radius: 100%
+    border: 11px solid $color_black
+    margin-top: -30px
+    background-color: $color_blue
+    z-index: 1
+    overflow: hidden
+  .handle_top
+    .top
+      +size(100%,27px)
+      border-bottom: 8px solid $color_black
+      background-color: $color_gray
+      &:before
+        +size(11px,0px)
+        content: ''
+        position: absolute
+        top: 0px 
+        left: 6px
+        // background-color: white
+        border-left: 3px solid white
+        border-right: 3px solid white
+        border-top: 18px solid white
+        transform: perspective(5px) rotateX(1deg)
+        transform-origin: bottom
+    .bottom
+      .left
+        +size(18px,60px)
+        position: absolute
+        background-color: $color_reflective
+        top: 5px
+        left: 4px
+        border-radius: 20px
+        border-top: 0px 
+        border-right: 10px solid $color_reflective
+        transform: perspective(5px) rotateX(1deg)
+        transform-origin: bottom
+      .right
+        +size(7px,40px)
+        position: absolute
+        top: 20px
+        right: 5px
+        border-radius: 20px
+        transform: rotate(-3deg)
+        background-color: $color_black
+        &:after
+          content: ''
+          +size(7px,7px)
+          position: absolute
+          bottom: -14px
+          border-radius: 100%
+          background-color: $color_black
+  .handle_bottom
+    .inner
+      +size(111%,90%)
+      position: absolute
+      background-color: $color_lightblue
+      border-radius: 100%
+      top: -7px
+      left: -3px
+.paint
+  // z-index: 3
+  animation: disappear 3s infinite
+  // border: 1px solid red
+  position: absolute
+  left: 50%
+  top: 20%
+  transform: translateX(-50%)
+  +size(125px,150px)
+  // +size(125px,0px)
+  display: flex
+  .block
+    background-color: $color_pink
+    border-radius: 20px
+  .block1
+    width: 37px
+    margin-top: 2px
+    animation: block1_down 3s infinite
+  .block2
+    width: 20px
+    margin-top: 20px
+    margin-left: -1px
+    animation: block2_down 3s infinite
+    &:before
+      +size(93%,25px)
+      border-radius: 100%
+      content: ''
+      position: absolute
+      top: -4px
+      left: 1px
+      background-color: $color_bgcblue
+  .block3
+    width: 22px
+    margin-left: -1px
+    animation: block3_down 3s infinite
+  .block4
+    width: 15px
+    margin-top: 20px
+    margin-left: -1px
+    animation: block4_down 3s infinite
+    &:before
+      +size(93%,25px)
+      border-radius: 100%
+      content: ''
+      position: absolute
+      top: -4px
+      left: 1px
+      background-color: $color_bgcblue
+  .block5
+    margin-top: 5px
+    width: 34px
+    margin-left: -1px
+    animation: block5_down 3s infinite
+    
+@keyframes move
+  0%
+    top: 40%
+  50%
+    top: 70%
+  100%
+    top: 40%
+@keyframes bigpaintmove
+  0%
+    top: -100%
+  50%
+    top: -200%
+  100%
+    top: -100%
+@keyframes disappear
+  0%
+    height: 0px
+  50%
+    height: 220px
+  100%
+    height: 0px
+@keyframes block1_down
+  0%
+    margin-top: 2px
+  100%
+    margin-top: 55px
+@keyframes block2_down
+  0%
+    margin-top: 20px
+  100%
+    margin-top: 90px
+@keyframes block3_down
+  0%
+    margin-top: 0px
+  100%
+    margin-top: 70px
+@keyframes block4_down
+  0%
+    margin-top: 20px
+  100%
+    margin-top: 75px  
+@keyframes block5_down
+  0%
+    margin-top: 5px
+  100%
+    margin-top: 40px  
