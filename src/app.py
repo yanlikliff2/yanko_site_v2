@@ -103,9 +103,9 @@ def forbidden(e):
 def unauthorized(e):
     return render_template('401.html'), 401
 
-@app.errorhandler(405)
-def method_not_allowed(e):
-    return render_template('405.html'), 405
+@app.errorhandler(503)
+def service_unavailable(e):
+    return render_template('503.html'), 503
 
 if __name__ == '__main__':
     with app.app_context():
