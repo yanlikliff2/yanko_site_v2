@@ -1,9 +1,4 @@
-:root {
-    --main-color: blanchedalmond;
-    --point-color: #BD3127;
-    --size: 5px;
-  }
-  .header{
+.header{
     padding: 80px;
     text-align: center;
     background-color: blanchedalmond;
@@ -31,7 +26,7 @@
     color: black;
 }
   .loader {
-    background-color: var(--main-color);
+    background-color: var(blanchedalmond);
     overflow: hidden;
     width: 100%;
     height: 70%;
@@ -46,8 +41,8 @@
   
   .loader__element {
     border-radius: 100%;
-    border: var(--size) solid var(--point-color);
-    margin: calc(var(--size)*2);
+    border: var(5px) solid var(#BD3127);
+    margin: calc(var(5px)*2);
   }
   
   .loader__element:nth-child(1) {
@@ -62,7 +57,7 @@
   }
   
   @keyframes preloader {
-    33% { transform: var(--point-color(#2beb52));}
-    33% { transform: var(--point-color(#4c56cb));}
+    33% { border: #4c56cb;}
+    33% { border: #52cb4c;}
     100% { transform: scale(2); }
   }
