@@ -5,15 +5,16 @@
         <meta charset="utf-8">
         <meta name = "viewport" content="width=device-width,initial-scale=1.0">
         <title>404 Page not Found</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='Style1.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='400.css') }}">
         
     </head>
 
     <body>
-        <div class="ball">
-            <div class="ball-bg"></div>
-            </div>
-        <p>
+        <div class="loader">
+            <span class="loader__element"></span>
+            <span class="loader__element"></span>
+            <span class="loader__element"></span>
+          </div>
         <div class="header">
                 Произошёл Bad_Request
             </p>
