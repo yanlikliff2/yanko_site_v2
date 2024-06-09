@@ -36,5 +36,7 @@
   }
   
   @keyframes preloader {
+    33% { transform: border solid var(rgb(0, 255, 51));}
+    66% { transform: border solid var(rgb(114, 94, 228));}
     100% { transform: scale(2); }
   }
